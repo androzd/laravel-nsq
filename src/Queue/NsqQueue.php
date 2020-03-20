@@ -3,17 +3,9 @@
 namespace Merkeleon\Nsq\Queue;
 
 use Illuminate\Contracts\Queue\Queue as QueueContract;
-use Illuminate\Database\Connection;
-use Illuminate\Queue\Jobs\DatabaseJob;
-use Illuminate\Queue\Jobs\DatabaseJobRecord;
-use Illuminate\Support\Carbon;
 use Illuminate\Queue\Queue;
 use Merkeleon\Nsq\src\Drivers\Consumer\ConsumerManager;
 use Merkeleon\Nsq\src\Drivers\Producer\ProducerManager;
-use Merkeleon\Nsq\src\NsqJob;
-use Nsq;
-use NsqLookupd;
-use NsqMessage;
 
 class NsqQueue extends Queue implements QueueContract
 {
